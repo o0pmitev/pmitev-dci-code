@@ -1,3 +1,23 @@
+// =============================================== 6 =============================================== \\
+
+// SyntaxParser
+//1.Syntax parsers - a program that reads your code and determines what it does and if its grammar is valid! A compiler!
+
+
+//2.Lexical environments - where something sits physically in the code you write.
+
+//3.Execution context - a wrapper to help manage the code that is running.
+
+// =============================================== 7 =============================================== \\
+// Name/Value Pairs and Objects
+// Name/Value Pairs: a name which maps to a unique value! The name may be defined more than once, but only can have one value in any given context. That value may be more name/value pairs.
+//
+
+// Object : is a collection of a name value pairs.
+
+// =============================================== 9 =============================================== \\
+// The Global Environment and The Global Object
+
 // The javascript  create 2 things for you the `global object` and `this`
 // In the global lvl this reference to the global object(window in the case of browsers)
 // Global = not inside a function
@@ -94,5 +114,78 @@
 
 // =============================================== 15 =============================================== \\
 
+//Functions, Context, and Variable Environments
+// variable environment: where the variables live and how they 
+// relate to each other in memory.
 
+// function b() { // 6 
+//   let myVar; // Third // 71
+//   console.log(myVar) ; // ~> undefined
+// }
 
+// function a() { // 3
+//   let myVar = 2; // Secont // 4
+//   console.log(myVar); // ~> 2
+//   b(); // Create an second execution context when called // 5
+// }
+
+// let myVar = 1; // First 1 
+// console.log(myVar);// ~> 1
+// a(); // Create an execution context  when called 2
+// console.log(myVar); // ~> 1
+
+// =============================================== 16 =============================================== \\
+// The Scope chain
+
+// function b() {
+//   console.log(myVar); // ~> 1; // uses myVar which is declared on the global level
+// }
+
+// function a() {
+//   let myVar = 2;
+//   b();
+// };
+
+// let myVar = 1; // global level 
+// a(); // ~> returns 1;
+ 
+//----------------------------------------------------------------------------------------------------
+
+// function a() {
+//   function b() {
+//     console.log(myVar); // ~> 2; // uses myVar in the function`s a execution context
+//   }
+//   let myVar = 2;
+//   b();
+// };
+
+// let myVar = 1; // global level 
+// a(); // ~> returns 1;
+ 
+// =============================================== 17 =============================================== \\
+// Scope, ES6, and let
+// Scope is where A Variable is Available in your code.And if it's truly the same variable, or a new
+// copy
+
+// let - create a block scoped variable
+
+// =============================================== 18 =============================================== \\
+// What about Asynchronous Callbacks?
+// Asynchronous: more than one at a time
+
+// long running function
+// function waitThreeSeconds () {
+//   let ms = 3000 + new Date().getTime();
+//   while(new Date < ms) {  }
+//     console.log('finished function');
+// }
+
+// function clickHandler() {
+//   console.log('click event!');
+// }
+
+// // listen for the click event
+// document.addEventListener('click', clickHandler);
+
+// waitThreeSeconds();
+// console.log("finished execution");
