@@ -3,20 +3,17 @@
 // convenience to get you started writing code faster.
 //
 
-export const isArmstrongNumber = (number) => {
-  let arm = 0;
-  let a;
-
-  let temp = number;
-
-  while (temp > 0) {
-    a = temp % 10;
-    temp = parseInt(temp / 10);
-    arm = arm + a * a * a;
-  }
-  if (arm === number) {
-    return true;
-  } else {
-    return false;
-  }
+// export const isArmstrongNumber = (number) => {
+ const isArmstrongNumber = (number) => {
+  let myArr = [];
+  let strToNum = number.toString();
 };
+
+console.log(isArmstrongNumber(232));
+
+
+
+
+//For example, 371 is an Armstrong 
+//number since 3**3 + 7**3 + 1**3 = 371.
+//https://stackoverflow.com/questions/7784620/javascript-number-split-into-individual-digits
