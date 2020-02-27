@@ -25,6 +25,6 @@ console.log(companyNames)
 */
 
 const cheapestTickets = arr => arr.filter(item => item.avgPriceTicket < 100).map(item => item.airlinesName);
-
 console.log(`=== Tickets less than 100 Euro Tickets. === \n`);
-console.log(`${cheapestTickets(airlinePrices)} \n`);
+// console.log(airlinePrices.filter(item => item.avgPriceTicket < 100).map(item => item.airlinesName));
+console.log(cheapestTickets(airlinePrices));

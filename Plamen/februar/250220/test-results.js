@@ -42,7 +42,7 @@ console.log(`${averageArray2} \n`);
 console.log('=== Compare if the average has moved up, down and by what margin? ===\n');
 //-----------------------------------------------------------------------------------
 
-const averageDifference = (averageArray1 - averageArray2).toFixed(2);
+const averageDifference = (Math.abs(averageArray2 - averageArray1)).toFixed(2); // turn negative numbers into positive
 console.log(`The average difference is: ${averageDifference} \n`);
 
 // In the end try to find the best score in the class and print it to the console.
