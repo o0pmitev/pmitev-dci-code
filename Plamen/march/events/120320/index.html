@@ -12,6 +12,17 @@
 <body>
   <div id="newsletter">
     <h1>subscribe</h1>
+    <!-- in forms its better to use POST method-->
+    <form action="#" method="GET">
+      <label for="email">
+        Please enter E-Mail-Address:
+      </label>
+      <input type="email" placeholder="example@gmail.com" id="email" name="email">
+      <input type="submit" value="Submit me!"> <!-- value is used to give the name to the submit button -->
+      <!-- the 'id' should be the same as the 'for' in the label -->
+      <!-- 'name' needs to be the same as you want it after the submission -->
+      <input type="reset" value="Reset me!">
+    </form>
   </div>
 </body>
 
